@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Registrar relatório | AI Usage Monitor</title>
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">AI</span>
+        AI Usage Monitor
+      </div>
+
+      <button id="logoutButton" class="logout-button" type="button">
+        Sair
+      </button>
+    </header>
+
+    <section class="form-layout">
+      <div class="form-intro">
+        <span class="eyebrow">Novo registro</span>
+
+        <h1>
+          Registre o uso da
+          <span>inteligência artificial.</span>
+        </h1>
+
+        <p>
+          Preencha as informações abaixo para manter um histórico
+          organizado, rastreável e transparente.
+        </p>
+
+        <div class="tech-line">
+          <span></span>
+          <small>SECURE DATA INPUT / 01</small>
+        </div>
+      </div>
+
+      <section class="report-card glass-card">
+        <div class="section-header">
+          <div>
+            <span class="section-number">01</span>
+            <h2>Dados do relatório</h2>
+          </div>
+
+          <span class="live-label">
+            <span class="status-dot"></span>
+            ONLINE
+          </span>
+        </div>
+
+        <form id="reportForm" class="report-form">
+          <div class="form-grid">
+            <div class="field-group">
+              <label for="userName">Nome do responsável</label>
+              <input
+                type="text"
+                id="userName"
+                placeholder="Ex.: João da Silva"
+                required
+              >
+            </div>
+
+            <div class="field-group">
+              <label for="iaTool">Ferramenta de IA</label>
+              <input
+                type="text"
+                id="iaTool"
+                placeholder="Ex.: ChatGPT, Gemini..."
+                required
+              >
+            </div>
+
+            <div class="field-group full-width">
+              <label for="usagePurpose">Como a IA foi utilizada?</label>
+              <textarea
+                id="usagePurpose"
+                rows="5"
+                placeholder="Descreva a finalidade do uso da IA..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="field-group">
+              <label for="usageDate">Data e horário</label>
+              <input type="datetime-local" id="usageDate" required>
+            </div>
+
+            <div class="field-group">
+              <label for="resultQuality">Avaliação do resultado</label>
+              <select id="resultQuality" required>
+                <option value="">Selecione uma opção</option>
+                <option value="Excelente">Excelente</option>
+                <option value="Boa">Boa</option>
+                <option value="Regular">Regular</option>
+                <option value="Ruim">Ruim</option>
+              </select>
+            </div>
+
+            <div class="field-group full-width">
+              <label for="notes">Observações adicionais</label>
+              <textarea
+                id="notes"
+                rows="3"
+                placeholder="Campo opcional..."
+              ></textarea>
+            </div>
+          </div>
+
+          <button id="submitButton" class="primary-button" type="submit">
+            <span>Registrar relatório</span>
+            <span class="button-arrow">→</span>
+          </button>
+
+          <div id="reportMessage" class="form-message"></div>
+        </form>
+      </section>
+    </section>
+
+    <footer class="page-footer">
+      <a href="dados.html" class="secondary-button">
+        Visualizar registros públicos →
+      </a>
+
+      <span>Dados sincronizados com Supabase</span>
+    </footer>
+  </main>
+
+  <script type="module" src="js/formulario.js"></script>
+</body>
+</html>
