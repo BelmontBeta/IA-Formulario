@@ -6,23 +6,40 @@
 
   <title>Registrar relatório | AI Usage Monitor</title>
 
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/formulario.css">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/formulario.css">
 </head>
+
 <body>
   <main class="page-shell">
-    <header class="topbar">
-      <div class="brand">
-        <span class="brand-mark">AI</span>
-        AI Usage Monitor
-      </div>
 
-      <button id="logoutButton" class="logout-button" type="button">
-        Sair
-      </button>
+    <header class="topbar">
+      <a href="formulario.html" class="brand">
+        <span class="brand-mark">AI</span>
+        <span>AI Usage Monitor</span>
+      </a>
+
+      <div class="topbar-actions">
+        <button
+          id="changePasswordButton"
+          class="secondary-button"
+          type="button"
+        >
+          Alterar senha
+        </button>
+
+        <button
+          id="logoutButton"
+          class="logout-button"
+          type="button"
+        >
+          Sair
+        </button>
+      </div>
     </header>
 
     <section class="form-layout">
+
       <div class="form-intro">
         <span class="eyebrow">Novo registro</span>
 
@@ -43,8 +60,9 @@
       </div>
 
       <section class="report-card glass-card">
+
         <div class="section-header">
-          <div>
+          <div class="section-heading">
             <span class="section-number">01</span>
             <h2>Dados do relatório</h2>
           </div>
@@ -56,45 +74,67 @@
         </div>
 
         <form id="reportForm" class="report-form">
+
           <div class="form-grid">
+
             <div class="field-group">
               <label for="userName">Nome do responsável</label>
+
               <input
                 type="text"
                 id="userName"
+                name="userName"
                 placeholder="Ex.: João da Silva"
+                maxlength="100"
                 required
               >
             </div>
 
             <div class="field-group">
               <label for="iaTool">Ferramenta de IA</label>
+
               <input
                 type="text"
                 id="iaTool"
+                name="iaTool"
                 placeholder="Ex.: ChatGPT, Gemini..."
+                maxlength="100"
                 required
               >
             </div>
 
             <div class="field-group full-width">
               <label for="usagePurpose">Como a IA foi utilizada?</label>
+
               <textarea
                 id="usagePurpose"
+                name="usagePurpose"
                 rows="5"
                 placeholder="Descreva a finalidade do uso da IA..."
+                maxlength="1000"
                 required
               ></textarea>
             </div>
 
             <div class="field-group">
               <label for="usageDate">Data e horário</label>
-              <input type="datetime-local" id="usageDate" required>
+
+              <input
+                type="datetime-local"
+                id="usageDate"
+                name="usageDate"
+                required
+              >
             </div>
 
             <div class="field-group">
               <label for="resultQuality">Avaliação do resultado</label>
-              <select id="resultQuality" required>
+
+              <select
+                id="resultQuality"
+                name="resultQuality"
+                required
+              >
                 <option value="">Selecione uma opção</option>
                 <option value="Excelente">Excelente</option>
                 <option value="Boa">Boa</option>
@@ -105,22 +145,36 @@
 
             <div class="field-group full-width">
               <label for="notes">Observações adicionais</label>
+
               <textarea
                 id="notes"
+                name="notes"
                 rows="3"
                 placeholder="Campo opcional..."
+                maxlength="1000"
               ></textarea>
             </div>
+
           </div>
 
-          <button id="submitButton" class="primary-button" type="submit">
+          <button
+            id="submitButton"
+            class="primary-button"
+            type="submit"
+          >
             <span>Registrar relatório</span>
             <span class="button-arrow">→</span>
           </button>
 
-          <div id="reportMessage" class="form-message"></div>
+          <div
+            id="reportMessage"
+            class="form-message"
+            role="alert"
+          ></div>
+
         </form>
       </section>
+
     </section>
 
     <footer class="page-footer">
@@ -130,8 +184,89 @@
 
       <span>Dados sincronizados com Supabase</span>
     </footer>
+
   </main>
 
-  <script type="module" src="js/formulario.js"></script>
+  <!-- Modal de alteração de senha -->
+  <div
+    id="passwordModal"
+    class="modal"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-content glass-card"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="passwordModalTitle"
+    >
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow">Segurança da conta</span>
+          <h2 id="passwordModalTitle">Alterar senha</h2>
+        </div>
+
+        <button
+          id="closeModalButton"
+          class="close-button"
+          type="button"
+          aria-label="Fechar janela"
+        >
+          ×
+        </button>
+      </div>
+
+      <form id="changePasswordForm">
+
+        <div class="field-group">
+          <label for="newPassword">Nova senha</label>
+
+          <input
+            type="password"
+            id="newPassword"
+            placeholder="Digite a nova senha"
+            minlength="6"
+            autocomplete="new-password"
+            required
+          >
+
+          <small class="field-hint">
+            A senha deve ter pelo menos 6 caracteres.
+          </small>
+        </div>
+
+        <div class="field-group">
+          <label for="confirmPassword">Confirmar nova senha</label>
+
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Digite a senha novamente"
+            minlength="6"
+            autocomplete="new-password"
+            required
+          >
+        </div>
+
+        <button
+          id="updatePasswordButton"
+          class="primary-button"
+          type="submit"
+        >
+          <span>Atualizar senha</span>
+          <span class="button-arrow">→</span>
+        </button>
+
+        <div
+          id="passwordMessage"
+          class="form-message"
+          role="alert"
+        ></div>
+
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="./js/formulario.js"></script>
+  <script type="module" src="./js/changePassword.js"></script>
 </body>
 </html>
