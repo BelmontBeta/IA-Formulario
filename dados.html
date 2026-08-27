@@ -4,72 +4,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Registros públicos | AI Usage Monitor</title>
+  <title>Histórico de uso de IA</title>
 
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/dados.css">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/dados.css">
 </head>
+
 <body>
-  <main class="page-shell data-page">
+  <main class="page-shell">
+
     <header class="data-header">
-      <div>
-        <div class="brand">
-          <span class="brand-mark">AI</span>
-          AI Usage Monitor
-        </div>
+      <div class="data-title">
+        <span class="eyebrow">Analytics / IA</span>
 
-        <span class="eyebrow">Painel público</span>
-
-        <h1>Registros de uso de IA</h1>
+        <h1>Histórico de uso de IA</h1>
 
         <p class="subtitle">
-          Acompanhe de forma clara e organizada os relatórios
-          registrados no projeto.
+          Visualize todos os registros de uso de inteligência artificial
+          realizados pelos usuários do sistema.
         </p>
       </div>
 
-      <a href="formulario.html" class="secondary-button">
-        Área de registro →
-      </a>
+      <div class="data-actions">
+        <a
+          id="formLink"
+          class="secondary-button hidden"
+          href="formulario.html"
+        >
+          ← Voltar ao formulário
+        </a>
+
+        <button
+          id="downloadPdfButton"
+          class="pdf-button"
+          type="button"
+        >
+          <span class="pdf-icon">↓</span>
+          <span>Baixar relatório PDF</span>
+        </button>
+      </div>
     </header>
 
     <section class="stats-grid">
-      <article class="stat-card">
-        <span class="stat-label">Total de registros</span>
-        <strong id="totalReports">—</strong>
+      <article class="stat-card glass-card">
+        <span>Total de relatórios</span>
+        <strong id="totalReports">0</strong>
       </article>
 
-      <article class="stat-card">
-        <span class="stat-label">Ferramentas utilizadas</span>
-        <strong id="totalTools">—</strong>
+      <article class="stat-card glass-card">
+        <span>Ferramentas únicas</span>
+        <strong id="totalTools">0</strong>
       </article>
 
-      <article class="stat-card">
-        <span class="stat-label">Última atualização</span>
+      <article class="stat-card glass-card">
+        <span>Última atualização</span>
         <strong id="lastUpdate">—</strong>
       </article>
     </section>
 
     <section class="filters-card glass-card">
-      <div class="filter-title">
-        <span class="section-number">FILTER / 01</span>
-        <h2>Filtrar registros</h2>
+      <div class="section-heading">
+        <span class="section-number">01</span>
+        <h2>Filtros de pesquisa</h2>
       </div>
 
       <div class="filters">
         <div class="field-group">
           <label for="searchInput">Pesquisar</label>
+
           <input
-            type="search"
             id="searchInput"
-            placeholder="Ferramenta, nome ou finalidade..."
+            type="search"
+            placeholder="Buscar por ferramenta, responsável ou propósito..."
           >
         </div>
 
         <div class="field-group">
-          <label for="qualityFilter">Resultado</label>
+          <label for="qualityFilter">Qualidade do resultado</label>
+
           <select id="qualityFilter">
-            <option value="">Todos</option>
+            <option value="">Todas as qualidades</option>
             <option value="Excelente">Excelente</option>
             <option value="Boa">Boa</option>
             <option value="Regular">Regular</option>
@@ -79,7 +93,7 @@
       </div>
     </section>
 
-    <div id="loadingState" class="state-box">
+    <div id="loadingState" class="state-box visible">
       Carregando registros...
     </div>
 
@@ -90,8 +104,13 @@
     </div>
 
     <section id="reportsGrid" class="reports-grid"></section>
+
   </main>
 
-  <script type="module" src="js/dados.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.1/jspdf.plugin.autotable.min.js"></script>
+
+  <script type="module" src="./js/dados.js"></script>
 </body>
 </html>

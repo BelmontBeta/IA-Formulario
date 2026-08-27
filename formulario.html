@@ -93,14 +93,20 @@
             <div class="field-group">
               <label for="iaTool">Ferramenta de IA</label>
 
-              <input
-                type="text"
+              <select
                 id="iaTool"
                 name="iaTool"
-                placeholder="Ex.: ChatGPT, Gemini..."
-                maxlength="100"
                 required
               >
+                <option value="">Selecione uma ferramenta</option>
+                <option value="ChatGPT">ChatGPT</option>
+                <option value="Gemini">Gemini</option>
+                <option value="Copilot">Copilot</option>
+                <option value="Claude">Claude</option>
+                <option value="Deepseek">Deepseek</option>
+                <option value="Lovable">Lovable</option>
+                <option value="Outra">Outra (especificar nas observações)</option>
+              </select>
             </div>
 
             <div class="field-group full-width">
