@@ -1,79 +1,78 @@
 # IA-Formulario
 
-Um projeto front-end para formulários com melhorias de interface possivelmente orientadas por IA.
+Aplicação front-end simples para criação e visualização de formulários.
 
-> Observação: README inicial gerado automaticamente. Ajuste as seções de acordo com os detalhes do projeto (funcionalidades específicas, instruções de instalação, licença, etc.).
+Este repositório contém páginas HTML, estilos em CSS e scripts JavaScript para demonstração de formulários e visualização de dados submetidos localmente.
 
-## Visão geral
+Principais linguagens (estimativa):
+- CSS — 48.1%
+- JavaScript — 30.1%
+- HTML — 21.8%
 
-IA-Formulario é uma aplicação web leve construída com HTML, CSS e JavaScript que fornece componentes de formulário e interações de interface. O repositório contém markup, estilos e scripts que compõem uma experiência de formulário responsiva.
+## Conteúdo do repositório
 
-Linguagens principais (aproximação baseada na composição do repositório):
+- index.html — página inicial / menu de navegação
+- formulario.html — formulário principal para entrada de dados
+- dados.html — página demonstrativa para exibir/consultar os dados submetidos
+- css/ — pasta com folhas de estilo (estilização do layout e dos formulários)
+- js/ — pasta com scripts JavaScript (validação, manipulação do DOM, armazenamento local)
 
-- CSS: 48.1%
-- JavaScript: 30.1%
-- HTML: 21.8%
+> Observação: os nomes acima refletem os arquivos presentes no repositório. Atualize o conteúdo se adicionar novos arquivos ou reorganizar pastas.
 
-## Funcionalidades (exemplo)
+## Como visualizar localmente
 
-- Formulários responsivos e estilizados
-- Validação básica no lado cliente (JavaScript)
-- Componentes reutilizáveis para campos, botões e mensagens de erro
+Métodos rápidos para abrir o projeto:
 
-> Atualize esta seção com as funcionalidades reais do seu projeto.
+1) Abrir diretamente no navegador
+- Basta abrir `index.html` com um duplo clique. Funcionalidades que usam fetch ou módulos podem exigir um servidor local.
 
-## Como visualizar
+2) Servidor HTTP rápido (recomendado)
+- Com Python 3:
 
-Opções simples para abrir o projeto localmente:
+```bash
+python3 -m http.server 8000
+```
 
-1. Abrir diretamente
-   - Abra o arquivo `index.html` no seu navegador (duplo clique). Para alguns recursos (ex.: fetch, módulos ES), é recomendável executar um servidor HTTP local.
+Acesse: `http://localhost:8000`
 
-2. Servidor HTTP rápido (recomendado)
-   - Com Python 3:
-     ```bash
-     python3 -m http.server 8000
-     ```
-     Depois acesse: `http://localhost:8000`
+- Com Node.js (serve):
 
-   - Com serve (Node.js):
-     ```bash
-     npm install -g serve
-     serve .
-     ```
+```bash
+npm install -g serve
+serve .
+```
 
-3. Extensão Live Server (VS Code)
-   - Instale a extensão Live Server e clique em "Go Live" para abrir o projeto.
+3) Live Server (VS Code)
+- Instale a extensão Live Server e clique em "Go Live".
 
-## Estrutura sugerida do repositório
+## Uso
 
-- index.html — entrada principal
-- css/ — folhas de estilo
-- js/ — scripts JavaScript
-- assets/ — imagens e outras mídias
+- Abra `formulario.html` para preencher os campos do formulário.
+- Dependendo da implementação dos scripts em `js/`, os dados podem ser validados no cliente e armazenados no localStorage ou exibidos em `dados.html`.
 
-(Ajuste conforme a estrutura real do repositório.)
+Se quiser que eu escreva exemplos de preenchimento, valide campos específicos ou implemente salvamento em backend (Node/Express, Firebase, etc.), descreva o que deseja.
 
-## Desenvolvimento
+## Estrutura sugerida para desenvolvimento
 
-- Contribua abrindo issues e pull requests.
-- Siga convenções de estilo (indentação, nomes de classe semânticos, comentários quando necessário).
-- Para alterações CSS/JS, crie branches descritivos: `feature/nome-da-funcionalidade` ou `fix/descricao`.
+- css/
+  - styles.css — estilos globais
+- js/
+  - main.js — lógica de interação e validação
+- index.html
+- formulario.html
+- dados.html
 
-## Como contribuir
+Adote nomes semânticos e mantenha a separação entre estilos, scripts e markup.
 
-1. Fork o repositório.
-2. Crie uma branch: `git checkout -b feature/minha-mudanca`
-3. Faça commits claros e atômicos.
-4. Abra um Pull Request descrevendo a mudança.
+## Contribuição
 
-## Testes
-
-Nenhum framework de testes automatizados detectado. Adicione instruções aqui se você incluir testes posteriormente.
+- Fork o repositório
+- Crie uma branch descritiva: `feature/nome-da-funcionalidade` ou `fix/descricao`
+- Abra um Pull Request explicando as mudanças
 
 ## Licença
 
-Nenhuma licença foi encontrada neste repositório. Recomenda-se adicionar um arquivo `LICENSE` (por exemplo, MIT) se você pretende tornar o código reutilizável publicamente.
+Nenhuma licença detectada. Recomenda-se adicionar um arquivo `LICENSE` (por exemplo MIT) se você pretende permitir uso público e contribuições.
 
 Exemplo rápido (MIT):
 
@@ -96,9 +95,14 @@ Substitua [ANO] e [NOME] conforme apropriado.
 
 ## Contato
 
-- Autor: BelmontBeta
-- GitHub: https://github.com/BelmontBeta
+Autor: BelmontBeta
+Repositório: https://github.com/BelmontBeta/IA-Formulario
 
 ----
 
-Se quiser, posso atualizar o README com instruções de build/exemplos mais específicos ao conteúdo do repositório (por exemplo, descrever os arquivos reais, scripts existentes, telas, ou demonstrar o uso de componentes). Basta pedir que eu analise o repositório e eu atualizo o README com detalhes reais.
+Se quiser, eu posso:
+- Inserir exemplos de uso detalhados e screenshots (você pode enviar imagens)
+- Gerar um arquivo LICENSE.json com MIT/Apache
+- Implementar melhoria como validação avançada, salvar em CSV/JSON, ou integrar um backend simples
+
+Diga qual ação prefere que eu faça a seguir.
