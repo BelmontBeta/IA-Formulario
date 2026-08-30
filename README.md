@@ -69,10 +69,3 @@ Contato
 - Repositório: https://github.com/BelmontBeta/IA-Formulario
 
 ----
-
-Se quiser, eu posso também:
-- Inserir um exemplo real de payload JSON de um registro
-- Adicionar instruções para integrar um backend simples (Node/Express ou Firebase)
-- Gerar badges e capturas de tela
-
-Diga qual melhoria prefere que eu faça a seguir.
