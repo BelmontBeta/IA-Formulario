@@ -1,32 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 :root {
-  --bg-primary: #050b16;
-  --bg-secondary: #081525;
-  --bg-card: rgba(10, 24, 44, 0.86);
-  --bg-input: #071426;
+  --bg-primary: #050f0c;
+  --bg-secondary: #081c16;
+  --bg-card: rgba(10, 38, 28, 0.86);
+  --bg-input: #071a14;
 
-  --blue-100: #d9f3ff;
-  --blue-300: #73d9ff;
-  --blue-400: #20bfff;
-  --blue-500: #008cff;
-  --blue-600: #0064d8;
+  --green-100: #dcfff0;
+  --green-300: #81f5be;
+  --green-400: #35e99a;
+  --green-500: #0dcc79;
+  --green-600: #07965c;
 
-  --cyan: #00e5ff;
+  --cyan: #54ffc2;
   --green: #28d17c;
   --yellow: #ffc857;
   --red: #ff5577;
 
-  --text-primary: #f1f7ff;
-  --text-secondary: #91a8c2;
-  --text-muted: #627993;
+  --text-primary: #f1fff8;
+  --text-secondary: #91c2aa;
+  --text-muted: #63917c;
 
-  --border: rgba(89, 172, 255, 0.22);
-  --border-strong: rgba(0, 212, 255, 0.55);
+  --border: rgba(89, 255, 173, 0.22);
+  --border-strong: rgba(0, 255, 157, 0.55);
 
   --shadow-card:
     0 20px 60px rgba(0, 0, 0, 0.35),
-    0 0 35px rgba(0, 153, 255, 0.08);
+    0 0 35px rgba(0, 204, 121, 0.1);
 
   --radius-lg: 24px;
   --radius-md: 14px;
@@ -51,15 +51,15 @@ body {
   background:
     radial-gradient(
       circle at 15% 15%,
-      rgba(0, 140, 255, 0.17),
+      rgba(13, 204, 121, 0.17),
       transparent 28%
     ),
     radial-gradient(
       circle at 85% 80%,
-      rgba(0, 229, 255, 0.1),
+      rgba(84, 255, 194, 0.1),
       transparent 25%
     ),
-    linear-gradient(135deg, #030812 0%, #071527 52%, #040914 100%);
+    linear-gradient(135deg, #030c08 0%, #071d16 52%, #040d09 100%);
 
   font-family: "Inter", sans-serif;
 }
@@ -75,8 +75,8 @@ body::before {
   pointer-events: none;
 
   background-image:
-    linear-gradient(rgba(54, 155, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(54, 155, 255, 0.045) 1px, transparent 1px);
+    linear-gradient(rgba(54, 255, 161, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(54, 255, 161, 0.045) 1px, transparent 1px);
 
   background-size: 42px 42px;
   mask-image: linear-gradient(to bottom, black, transparent 90%);
@@ -94,11 +94,11 @@ body::after {
   content: "";
   pointer-events: none;
 
-  border: 1px solid rgba(0, 229, 255, 0.18);
+  border: 1px solid rgba(84, 255, 194, 0.18);
   border-radius: 50%;
   box-shadow:
-    0 0 0 35px rgba(0, 229, 255, 0.035),
-    0 0 0 70px rgba(0, 229, 255, 0.025);
+    0 0 0 35px rgba(84, 255, 194, 0.035),
+    0 0 0 70px rgba(84, 255, 194, 0.025);
 
   animation: pulseCircle 7s ease-in-out infinite;
 }
@@ -131,17 +131,18 @@ a {
 
 .glass-card {
   position: relative;
-
   overflow: hidden;
 
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
+
   background:
     linear-gradient(
       145deg,
-      rgba(18, 45, 77, 0.85),
-      rgba(6, 17, 32, 0.9)
+      rgba(18, 66, 47, 0.85),
+      rgba(6, 25, 18, 0.9)
     );
+
   box-shadow: var(--shadow-card);
   backdrop-filter: blur(18px);
 }
@@ -173,7 +174,7 @@ a {
 
   margin-bottom: 30px;
 
-  color: var(--blue-300);
+  color: var(--green-300);
   font-family: "Space Grotesk", sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
@@ -191,8 +192,8 @@ a {
   border-radius: 10px;
 
   color: var(--cyan);
-  background: rgba(0, 180, 255, 0.12);
-  box-shadow: 0 0 18px rgba(0, 207, 255, 0.22);
+  background: rgba(0, 220, 140, 0.12);
+  box-shadow: 0 0 18px rgba(0, 255, 157, 0.22);
 }
 
 h1,
@@ -255,9 +256,9 @@ p {
 }
 
 .form-message.info {
-  border-color: rgba(32, 191, 255, 0.5);
-  color: var(--blue-300);
-  background: rgba(32, 191, 255, 0.11);
+  border-color: rgba(53, 233, 154, 0.5);
+  color: var(--green-300);
+  background: rgba(53, 233, 154, 0.11);
 }
 
 @keyframes pulseCircle {

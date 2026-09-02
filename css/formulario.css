@@ -85,8 +85,8 @@
   height: 1px;
   background: linear-gradient(
     90deg,
-    var(--cyan),
-    rgba(0, 229, 255, 0.2)
+    var(--green),
+    rgba(0, 255, 64, 0.2)
   );
 }
 
@@ -269,13 +269,13 @@
 }
 
 .primary-button {
-  border: 1px solid rgba(0, 140, 255, 0.55);
+  border: 1px solid rgba(0, 255, 76, 0.55);
   color: var(--blue-100);
   background:
     linear-gradient(
       135deg,
-      rgba(0, 140, 255, 0.3),
-      rgba(0, 70, 128, 0.25)
+      rgba(0, 255, 13, 0.3),
+      rgba(1, 61, 6, 0.25)
     );
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.04),
@@ -288,8 +288,8 @@
   background:
     linear-gradient(
       135deg,
-      rgba(0, 140, 255, 0.42),
-      rgba(0, 70, 128, 0.35)
+      rgba(0, 255, 106, 0.42),
+      rgba(0, 128, 64, 0.35)
     );
   box-shadow:
     0 8px 25px rgba(0, 119, 255, 0.2),
