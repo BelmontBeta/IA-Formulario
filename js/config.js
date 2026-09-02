@@ -10,7 +10,7 @@
 export const APP_CONFIG = {
   // ===== INFORMAÇÕES DO CRIADOR =====
   // Altere "Seu Nome" para seu nome/organização
-  author: "Seu Nome",
+  author: "Caio Belmont",
   
   // ===== INFORMAÇÕES DA APLICAÇÃO =====
   appName: "AI Usage Monitor",
